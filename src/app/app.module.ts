@@ -5,6 +5,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   MenuBarDemoModule,
+  AlertDemoModule
 } from './demo';
 import { StoneUIModule } from './exports';
 import { RouterModule } from '@angular/router';
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
     StoneUIModule.forRoot(),
     BrowserAnimationsModule,
     MenuBarDemoModule,
+    AlertDemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
