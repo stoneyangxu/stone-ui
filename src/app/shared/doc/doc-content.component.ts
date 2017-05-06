@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 're-doc-content',
+  selector: 'st-doc-content',
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

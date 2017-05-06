@@ -1,5 +1,4 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { RebirthNGConfig } from './rebirth-ng.config';
 import { TabsModule } from './tabs';
 import {MenuBarModule} from './menu-bar';
 
@@ -16,14 +15,13 @@ import {MenuBarModule} from './menu-bar';
   declarations: [],
   providers: [],
 })
-export class RebirthNGModule {
+export class StoneUIModule {
 
   static forRoot(): ModuleWithProviders {
 
     return {
-      ngModule: RebirthNGModule,
+      ngModule: StoneUIModule,
       providers: [
-        { provide: RebirthNGConfig, useClass: RebirthNGConfig },
       ]
     };
   }

@@ -10,7 +10,7 @@ import {
 import * as hljs from 'highlight.js';
 
 @Component({
-  selector: 're-doc',
+  selector: 'st-doc',
   templateUrl: './doc.component.html',
   styleUrls: ['./doc.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

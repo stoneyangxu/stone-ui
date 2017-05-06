@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewContainerRef, Renderer2, ElementRef } from '@angular/core';
-import { RebirthNGConfig } from './exports/rebirth-ng.config';
-import { DemoConfigService } from './shared/demo/demo-config.service';
-import { MenuBar } from './exports/menu-bar/menu-bar.model';
-import { REBIRTH_NG_I18N_ZHCN } from './exports/rebirth-ng.i18n.zh-cn';
-import { ActivatedRoute } from '@angular/router';
-import { ThemeService } from './shared';
-import { DomSanitizer } from '@angular/platform-browser';
+import {Component, OnInit, ViewContainerRef, Renderer2, ElementRef} from '@angular/core';
+import {DemoConfigService} from './shared/demo/demo-config.service';
+import {MenuBar} from './exports/menu-bar/menu-bar.model';
+import {ActivatedRoute} from '@angular/router';
+import {ThemeService} from './shared';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'st-app',
@@ -19,17 +17,13 @@ export class AppComponent implements OnInit {
   menus: MenuBar;
   // largeDataSource = [];
 
-  constructor(private rebirthConfig: RebirthNGConfig,
-              private viewContainerRef: ViewContainerRef,
+  constructor(private viewContainerRef: ViewContainerRef,
               private demoConfigService: DemoConfigService,
               private  router: ActivatedRoute,
               private  themeService: ThemeService,
               private  renderer: Renderer2,
               private elementRef: ElementRef,
               private domSanitizer: DomSanitizer) {
-    this.rebirthConfig.rootContainer = this.viewContainerRef;
-
-    // this.rebirthConfig.extend(REBIRTH_NG_I18N_ZHCN);  // i18n
   }
 
   ngOnInit(): void {

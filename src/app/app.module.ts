@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {
   MenuBarDemoModule,
 } from './demo';
-import { RebirthNGModule } from './exports';
+import { StoneUIModule } from './exports';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -18,7 +18,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
     BrowserModule,
     RouterModule.forRoot([]),
     SharedModule.forRoot(),
-    RebirthNGModule.forRoot(),
+    StoneUIModule.forRoot(),
     BrowserAnimationsModule,
     MenuBarDemoModule,
   ],

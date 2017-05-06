@@ -1,9 +1,9 @@
-import { Directive, HostListener, Output, Input, EventEmitter, Renderer2, ElementRef, } from '@angular/core';
+import {Directive, HostListener, Output, Input, EventEmitter, Renderer2, ElementRef, HostBinding,} from '@angular/core';
 import { stopPropagationIfExist } from '../utils/dom-utils';
 
 @Directive({
-  selector: '[reDropdown]',
-  host: { '[class]': '"drop" + (direction?  direction : "down")' },
+  selector: '[stDropdown]',
+  // host: { '[class]': '"drop" + (direction?  direction : "down")' },
   exportAs: 'dropdown'
 })
 export class DropdownDirective {
@@ -11,6 +11,8 @@ export class DropdownDirective {
   @Output() dropdownStatusChange = new EventEmitter();
   @Input() activeCss = 'open';
   @Input() direction: 'down' | 'up';
+
+  @HostBinding('class') hostClass = '"drop" + (direction?  direction : "down")';
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {
   }

@@ -1,6 +1,6 @@
-import {ElementRef, Renderer2} from "@angular/core";
-import {WindowRef} from "../window-ref";
-import {DocumentRef} from "../window-ref/document-ref.service";
+import {ElementRef, Renderer2} from '@angular/core';
+import {WindowRef} from '../window-ref';
+import {DocumentRef} from '../window-ref/document-ref.service';
 
 export function centerWindowPosition(elementRef: ElementRef, windowRef: WindowRef): { top?: number, left?: number } {
   if (!elementRef.nativeElement || !elementRef.nativeElement.getBoundingClientRect) {
@@ -29,7 +29,7 @@ export function readFileAsDataURL(file) {
   return new Promise<any>((resolve, reject) => {
     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
-      reader.addEventListener("load", function () {
+      reader.addEventListener('load', function () {
         resolve(this.result);
       }, false);
 

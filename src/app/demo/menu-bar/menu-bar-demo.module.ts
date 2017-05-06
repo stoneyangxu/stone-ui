@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MenuBarDemoComponent } from './menu-bar-demo.component';
-import { RebirthNGModule } from '../../exports';
+import { StoneUIModule } from '../../exports';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, RebirthNGModule, FormsModule],
+  imports: [CommonModule, StoneUIModule, FormsModule],
   exports: [MenuBarDemoComponent],
   declarations: [MenuBarDemoComponent],
   providers: [],

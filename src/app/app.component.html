@@ -1,5 +1,5 @@
 <header>
-  <re-menu-bar [menuOptions]="menus" [type]="'navbar-fixed-top'"></re-menu-bar>
+  <st-menu-bar [menuOptions]="menus" [type]="'navbar-fixed-top'"></st-menu-bar>
 </header>
 
 <div class="container main">
@@ -8,7 +8,7 @@
   <hr/>
   <h1>Showcase</h1>
   <ng-container *ngFor="let item of components">
-    <re-doc [component]="item"></re-doc>
+    <st-doc [component]="item"></st-doc>
     <hr/>
   </ng-container>
 

@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ViewChild } from '@angular/
 import { MenuBar } from '../../exports';
 
 @Component({
-  selector: 're-menu-bar-demo',
+  selector: 'st-menu-bar-demo',
   templateUrl: './menu-bar-demo.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

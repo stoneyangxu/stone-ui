@@ -2,7 +2,7 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { RebirthNGModule } from './exports/rebirth-ng.module';
+import { StoneUIModule } from './exports/stone-ui.module';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -13,7 +13,7 @@ describe('AppComponent', () => {
       imports: [
         RouterModule.forRoot([]),
         SharedModule.forRoot(),
-        RebirthNGModule.forRoot()
+        StoneUIModule.forRoot()
       ],
       declarations: [
         AppComponent

@@ -3,7 +3,7 @@ import { TabContentDirective } from './tab-content.directive';
 import { TabTitleDirective } from './tab-title.directive';
 
 @Component({
-  selector: 're-tab',
+  selector: 'st-tab',
   template: ''
 })
 export class TabComponent {

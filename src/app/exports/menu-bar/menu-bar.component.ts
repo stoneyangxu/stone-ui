@@ -3,7 +3,7 @@ import { MenuBar } from './menu-bar.model';
 import { stopPropagationIfExist } from '../utils/dom-utils';
 
 @Component({
-  selector: 're-menu-bar',
+  selector: 'st-menu-bar',
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.scss'],
   exportAs: 'menuBar'
