@@ -1,9 +1,9 @@
-import {Component, OnInit, ViewContainerRef, Renderer2, ElementRef} from '@angular/core';
-import {DemoConfigService} from './shared/demo/demo-config.service';
-import {MenuBar} from './exports/menu-bar/menu-bar.model';
-import {ActivatedRoute} from '@angular/router';
-import {ThemeService} from './shared';
-import {DomSanitizer} from '@angular/platform-browser';
+import {Component, ElementRef, OnInit, Renderer2, ViewContainerRef} from "@angular/core";
+import {DemoConfigService} from "./shared/demo/demo-config.service";
+import {MenuBar} from "./exports/menu-bar/menu-bar.model";
+import {ActivatedRoute} from "@angular/router";
+import {ThemeService} from "./shared";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'st-app',
@@ -19,9 +19,9 @@ export class AppComponent implements OnInit {
 
   constructor(private viewContainerRef: ViewContainerRef,
               private demoConfigService: DemoConfigService,
-              private  router: ActivatedRoute,
-              private  themeService: ThemeService,
-              private  renderer: Renderer2,
+              private router: ActivatedRoute,
+              private themeService: ThemeService,
+              private renderer: Renderer2,
               private elementRef: ElementRef,
               private domSanitizer: DomSanitizer) {
   }
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   }
 
   private fixTSModuleImport(code): string {
-    return code.replace(/\.\.\/\.\.\/exports(\/.*)?/, 'rebirth-ng');
+    return code.replace(/\.\.\/\.\.\/exports(\/.*)?/, 'stone-ui');
   }
 
   private changeTheme(menu) {
@@ -64,12 +64,12 @@ export class AppComponent implements OnInit {
     const changeThemeHandler = (item) => this.changeTheme(item);
 
     this.menus = {
-      logo: 'https://greengerong.github.io/rebirth/assets/img/wolf2.png',
-      title: '破狼博客',
+      logo: 'https://avatars3.githubusercontent.com/u/26008395?v=3&u=b863316bec1fcf6cdd344591af3a5bcc9715088a&s=400',
+      title: 'StoneUI',
       home: './',
       menus: [
         {
-          text: '@Rebirth/NG',
+          text: '@StoneUI',
           router: ['./'],
           icon: 'glyphicon glyphicon-home'
         },
@@ -80,13 +80,13 @@ export class AppComponent implements OnInit {
         },
         {
           text: 'API Docs',
-          url: '/rebirth-ng/compodocs/overview.html',
+          url: '/stone-ui/compodocs/overview.html',
           target: '_blank',
           icon: 'glyphicon glyphicon-heart'
         },
         {
           text: '@Github',
-          url: 'https://github.com/greengerong/rebirth-ng',
+          url: 'https://github.com/stoneyangxu/stone-ui',
           target: '_blank',
           icon: 'glyphicon glyphicon-user'
         },

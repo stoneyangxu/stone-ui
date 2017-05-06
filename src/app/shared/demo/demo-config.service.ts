@@ -1,8 +1,8 @@
 import { Injectable, Type } from '@angular/core';
 import {
   MenuBarDemoComponent,
+  AlertDemoComponent
 } from '../../demo';
-import {AlertDemoComponent} from "../../demo/alert/alert-demo.component";
 
 @Injectable()
 export class DemoConfigService {

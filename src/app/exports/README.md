@@ -4,14 +4,14 @@
 
 ## Welcome
 
-Welcome to `@Rebirth/NG`. This repo is Angular4 ui library for Bootstrap. And it is being built from scratch in Typescript.
+Welcome to `StoneUI`. This repo is Angular4 ui library for Bootstrap. And it is being built from scratch in Typescript.
 
-You can check [Demo Showcase](/rebirth-ng) & [API document](/rebirth-ng/compodocs/overview.html).
+You can check [Demo Showcase](/stone-ui) & [API document](/stone-ui/compodocs/overview.html).
 
 
 ## Dependencies
 
-`@Rebirth/NG` is all base on Angular2 and Bootstrap css. It no dependency on jQuery or Bootstrap's JavaScript is required.
+It is all base on Angular4 and Bootstrap css. It no dependency on jQuery or Bootstrap's JavaScript is required.
 The only required dependencies are:
 
 * [Angular](https://angular.io/) (requires `Angular` version 4.0.0 or higher)
@@ -19,19 +19,19 @@ The only required dependencies are:
 * [DateFns](https://date-fns.org/) (`date-fns` 1.27.2 or higher. It is for `DatePicker` parse & format date)
 
 
-*Notice*: `OnPush` @Input is recommended in `@Rebirth/NG`, so use `Immutable.js` will be easy.
+*Notice*: `OnPush` @Input is recommended, so use `Immutable.js` will be easy.
 
 ## Installation
 
-After installing the above dependencies, install `@Rebirth/NG` via: 
+After installing the above dependencies, install `StoneUI` via: 
   
-    npm install --save rebirth-ng
+    npm install --save stone-ui
   
 Once installed you need to import our main module.
 
-    import { RebirthNGModule } from 'rebirth-ng';
+    import { StoneUIModule } from 'stone-ui';
   
-Then use `RebirthNGModule.forRoot()` to declare on your root module:
+Then use `StoneUIModule.forRoot()` to declare on your root module:
 
     
     @NgModule({
@@ -40,7 +40,7 @@ Then use `RebirthNGModule.forRoot()` to declare on your root module:
       ],
       imports: [
         BrowserModule,
-        RebirthNGModule.forRoot(),
+        StoneUIModule.forRoot(),
       ],
       providers: [],
       bootstrap: [AppComponent]
@@ -49,10 +49,10 @@ Then use `RebirthNGModule.forRoot()` to declare on your root module:
     }
 
 
-And use `RebirthNGModule` to declare on your feature module:
+And use `StoneUIModule` to declare on your feature module:
 
     @NgModule({
-      imports: [CommonModule, FormsModule, RebirthNGModule],
+      imports: [CommonModule, FormsModule, StoneUIModule],
       exports: [DatePickerDemoComponent],
       declarations: [DatePickerDemoComponent],
       providers: [],
@@ -63,7 +63,7 @@ And use `RebirthNGModule` to declare on your feature module:
 
 ## Animations
 
-`@Rebirth/NG` have got animations done. So You should include `BrowserAnimationsModule` or `NoopAnimationsModule` to your `AppModule`.
+`StoneUI` have got animations done. So You should include `BrowserAnimationsModule` or `NoopAnimationsModule` to your `AppModule`.
 
 example:
 
@@ -77,7 +77,7 @@ example:
         BrowserModule,
         RouterModule.forRoot([]),
         SharedModule.forRoot(),
-        RebirthNGModule.forRoot(),
+        StoneUIModule.forRoot(),
         BrowserAnimationsModule
       ],
       providers: [],
@@ -89,4 +89,4 @@ example:
 ## FAQ
 
 
-Please check [github](https://github.com/greengerong/rebirth-ng/issues) issue for your common problems / solutions.
+Please check [github](https://github.com/stoneyangxu/stone-ui/issues) issue for your common problems / solutions.
