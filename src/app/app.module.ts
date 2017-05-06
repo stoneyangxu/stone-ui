@@ -1,20 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { BrowserModule } from '@angular/platform-browser';
+import {
+  MenuBarDemoModule,
+} from './demo';
+import { RebirthNGModule } from './exports';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    RouterModule.forRoot([]),
+    SharedModule.forRoot(),
+    RebirthNGModule.forRoot(),
+    BrowserAnimationsModule,
+    MenuBarDemoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+
+
